@@ -1,21 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { PageHero, Section } from "@/components/site/Section";
 import { Mail, MapPin, Phone, Send, MessageCircle } from "lucide-react";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — AuraSkill Tech" },
-      { name: "description", content: "Contact AuraSkill Tech for AI automation, premium websites, internships, chatbots and business systems." },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
-  component: Contact,
-});
-
-function Contact() {
+export default function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <>

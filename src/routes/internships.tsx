@@ -1,17 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/static-router";
 import { PageHero, Section, SectionHeading } from "@/components/site/Section";
 import { ArrowRight, GraduationCap, Briefcase, Award, Users } from "lucide-react";
-
-export const Route = createFileRoute("/internships")({
-  head: () => ({
-    meta: [
-      { title: "Internships — AuraSkill Tech" },
-      { name: "description", content: "Hands-on AI, full-stack, data, and digital marketing internships with mentorship and real-world projects." },
-    ],
-    links: [{ rel: "canonical", href: "/internships" }],
-  }),
-  component: Internships,
-});
 
 const programs = [
   { title: "AI / ML Internship", duration: "8 weeks", level: "Intermediate", desc: "Build LLM apps, agents, RAG systems, and ship to production." },
@@ -22,7 +11,7 @@ const programs = [
   { title: "Business Automation", duration: "6 weeks", level: "Beginner+", desc: "Automate ops with low-code tools and AI." },
 ];
 
-function Internships() {
+export default function Internships() {
   return (
     <>
       <PageHero eyebrow="Internships" title="Train with engineers shipping real AI." subtitle="Structured curriculum, real projects, mentorship, and a certificate that actually means something." />

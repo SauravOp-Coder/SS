@@ -1,18 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, SectionHeading } from "@/components/site/Section";
 import { FeatureCard } from "@/components/site/Card";
 import { Bot, Brain, Network, Database, Shield, Sparkles, MessageSquare, Workflow } from "lucide-react";
-
-export const Route = createFileRoute("/solutions")({
-  head: () => ({
-    meta: [
-      { title: "AI Solutions — AuraSkill Tech" },
-      { name: "description", content: "Production-grade AI: agents, RAG, custom LLM tools, chatbots, automation pipelines, and observability." },
-    ],
-    links: [{ rel: "canonical", href: "/solutions" }],
-  }),
-  component: Solutions,
-});
 
 const sols = [
   { icon: Bot, title: "AI Agents", desc: "Multi-step agents that reason, call tools, and complete real work." },
@@ -25,7 +13,7 @@ const sols = [
   { icon: Sparkles, title: "AI Strategy", desc: "Roadmaps, build-vs-buy analysis, ROI modeling, and pilot design." },
 ];
 
-function Solutions() {
+export default function Solutions() {
   return (
     <>
       <PageHero eyebrow="AI Solutions" title="Production AI, designed for outcomes." subtitle="We build AI systems that are reliable, observable, and aligned with business KPIs." />

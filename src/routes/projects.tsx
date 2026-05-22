@@ -1,18 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { PageHero, Section } from "@/components/site/Section";
 import { ArrowUpRight } from "lucide-react";
-
-export const Route = createFileRoute("/projects")({
-  head: () => ({
-    meta: [
-      { title: "Projects — AuraSkill Tech" },
-      { name: "description", content: "Selected AI, automation, and product engineering projects shipped by AuraSkill Tech." },
-    ],
-    links: [{ rel: "canonical", href: "/projects" }],
-  }),
-  component: Projects,
-});
 
 const projects = [
   { name: "NeuralFlow", tag: "AI Automation", desc: "Multi-agent platform automating ops for a fintech." },
@@ -23,7 +11,7 @@ const projects = [
   { name: "GrowthOS", tag: "Marketing AI", desc: "AI growth engine for D2C brands." },
 ];
 
-function Projects() {
+export default function Projects() {
   return (
     <>
       <PageHero eyebrow="Projects" title="Selected work. Real outcomes." subtitle="A handful of engagements that show how we work and what we ship." />

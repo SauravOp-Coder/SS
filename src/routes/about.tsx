@@ -1,20 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, SectionHeading } from "@/components/site/Section";
 import { FeatureCard, StatCard } from "@/components/site/Card";
 import { Target, Eye, Heart, Users } from "lucide-react";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — AuraSkill Tech" },
-      { name: "description", content: "AuraSkill Tech is an AI studio building automation, custom AI tools, and training the next generation of AI engineers." },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
-  component: About,
-});
-
-function About() {
+export default function About() {
   return (
     <>
       <PageHero

@@ -1,21 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/static-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Code2, BarChart3, Megaphone, GraduationCap, Wrench, MessageSquare, Workflow, CheckCircle2, Sparkles, Zap, Shield, Layers, Target, Cpu, Globe2 } from "lucide-react";
 import { Spline3D } from "@/components/site/Spline3D";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { FeatureCard, StatCard } from "@/components/site/Card";
 import { FloatingCube, NeuralNetwork, HoloPanel } from "@/components/site/Three";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "AuraSkill Tech — AI Automation, Websites & Internship Studio" },
-      { name: "description", content: "AuraSkill Tech builds premium websites, AI automation systems, custom AI tools, chatbots, dashboards, and practical internship programs." },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Home,
-});
 
 const services = [
   { icon: Code2, title: "Premium Web Development", desc: "Modern websites, landing pages and product UIs with strong SEO, speed and conversion focus." },
@@ -30,7 +19,7 @@ const services = [
 
 const outcomes = ["More qualified leads", "Lower manual workload", "Premium digital presence", "Faster operations", "Better customer response", "Internship-ready talent pipeline"];
 
-function Home() {
+export default function Home() {
   return (
     <>
       <section className="relative min-h-[calc(100vh-74px)] overflow-hidden bg-hero noise">

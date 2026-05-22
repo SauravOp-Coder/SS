@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState } from "@/static-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Sparkles, Bot, Code2, GraduationCap, BarChart3, MessageSquare, Workflow } from "lucide-react";
 import logo from "@/assets/logo.png";

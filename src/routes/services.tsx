@@ -1,18 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, SectionHeading } from "@/components/site/Section";
 import { FeatureCard } from "@/components/site/Card";
 import { Code2, Bot, Workflow, BarChart3, Megaphone, GraduationCap, Wrench, MessageSquare } from "lucide-react";
-
-export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — AuraSkill Tech" },
-      { name: "description", content: "Web development, AI automation, business automation, data analysis, digital marketing, internship training, custom AI tools, and chatbots." },
-    ],
-    links: [{ rel: "canonical", href: "/services" }],
-  }),
-  component: Services,
-});
 
 const all = [
   { icon: Code2, title: "Web Development", desc: "High-performance, accessible websites with modern stacks, SEO, and CMS integrations." },
@@ -25,7 +13,7 @@ const all = [
   { icon: MessageSquare, title: "Chatbot Development", desc: "Conversational AI for support, sales, and internal knowledge." },
 ];
 
-function Services() {
+export default function Services() {
   return (
     <>
       <PageHero eyebrow="Services" title="Premium AI, web and automation services for growing brands." subtitle="Choose one service or build a full digital growth system — website, chatbot, automation, dashboard and marketing flow." />
