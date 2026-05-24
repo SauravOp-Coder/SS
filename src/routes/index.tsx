@@ -24,8 +24,8 @@ export default function Home() {
     <>
       <section className="relative min-h-[calc(100vh-74px)] overflow-hidden bg-hero noise">
         <div className="absolute inset-0 grid-pattern opacity-45" />
-        <div className="absolute left-0 top-20 h-96 w-96 bg-orange-gradient opacity-15 blur-3xl" />
-        <div className="absolute right-0 bottom-0 h-[34rem] w-[34rem] bg-orange-gradient opacity-10 blur-3xl" />
+        <div className="absolute left-0 top-20 h-96 w-96 bg-primary/5 blur-3xl" />
+        <div className="absolute right-0 bottom-0 h-[34rem] w-[34rem] bg-primary/4 blur-3xl" />
         <div className="max-w-7xl mx-auto px-6 pt-24 pb-20 relative">
           <div className="grid lg:grid-cols-[1.02fr_.98fr] gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
@@ -53,11 +53,9 @@ export default function Home() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: .12 }}>
-              <div className="relative premium-border bg-surface/30 p-4 scanline">
+              <div className="relative min-h-[520px] flex items-center justify-center overflow-visible hero-model-wrap">
                 <Spline3D />
-                <div className="absolute left-5 bottom-5 right-5 grid grid-cols-3 gap-2">
-                  {["Strategy", "Build", "Scale"].map((x) => <div key={x} className="bg-background/70 backdrop-blur-xl border border-border px-3 py-2 text-center text-xs uppercase tracking-widest text-muted-foreground">{x}</div>)}
-                </div>
+                <div className="pointer-events-none absolute left-1/2 bottom-10 h-10 w-[58%] -translate-x-1/2 bg-black/20 blur-2xl" />
               </div>
             </motion.div>
           </div>

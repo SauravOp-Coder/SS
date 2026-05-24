@@ -63,10 +63,10 @@
   --border: oklch(0.18 0.012 60 / 10%);
   --input: oklch(0.18 0.012 60 / 12%);
   --ring: oklch(0.7 0.2 50);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.7 0.2 50 / 0.16), transparent 60%), linear-gradient(180deg, oklch(0.985 0.003 80), oklch(0.96 0.005 80));
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.7 0.2 50 / 0.07), transparent 60%), linear-gradient(180deg, oklch(0.985 0.003 80), oklch(0.96 0.005 80));
   --gradient-orange: linear-gradient(135deg, oklch(0.7 0.2 50), oklch(0.66 0.22 40));
-  --glow-orange: 0 0 60px oklch(0.7 0.2 50 / 0.35);
-  --glow-soft: 0 0 30px oklch(0.7 0.2 50 / 0.2);
+  --glow-orange: 0 0 42px oklch(0.7 0.2 50 / 0.22);
+  --glow-soft: 0 0 22px oklch(0.7 0.2 50 / 0.13);
   --glass-bg: oklch(1 0 0 / 0.65);
   --glass-border: oklch(0.18 0.012 60 / 0.08);
   --grid-line: oklch(0.18 0.012 60 / 0.06);
@@ -96,10 +96,10 @@
   --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 10%);
   --ring: oklch(0.74 0.19 55);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.74 0.19 55 / 0.18), transparent 60%), linear-gradient(180deg, oklch(0.13 0.012 60), oklch(0.1 0.01 60));
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.74 0.19 55 / 0.08), transparent 60%), linear-gradient(180deg, oklch(0.13 0.012 60), oklch(0.1 0.01 60));
   --gradient-orange: linear-gradient(135deg, oklch(0.74 0.19 55), oklch(0.68 0.22 40));
-  --glow-orange: 0 0 60px oklch(0.74 0.19 55 / 0.45);
-  --glow-soft: 0 0 30px oklch(0.74 0.19 55 / 0.25);
+  --glow-orange: 0 0 42px oklch(0.74 0.19 55 / 0.24);
+  --glow-soft: 0 0 22px oklch(0.74 0.19 55 / 0.15);
   --glass-bg: oklch(0.17 0.012 60 / 0.6);
   --glass-border: oklch(1 0 0 / 0.08);
   --grid-line: oklch(1 0 0 / 0.04);
@@ -156,8 +156,8 @@
   body {
     min-height: 100vh;
     background-image:
-      radial-gradient(circle at 12% 8%, oklch(0.74 0.19 55 / 0.12), transparent 28rem),
-      radial-gradient(circle at 88% 18%, oklch(0.62 0.18 45 / 0.10), transparent 24rem),
+      radial-gradient(circle at 12% 8%, oklch(0.74 0.19 55 / 0.045), transparent 28rem),
+      radial-gradient(circle at 88% 18%, oklch(0.62 0.18 45 / 0.035), transparent 24rem),
       linear-gradient(180deg, var(--background), var(--background));
   }
 }
@@ -191,3 +191,14 @@
 }
 
 @keyframes aura-scan { from { transform: translateY(-40%); } to { transform: translateY(280%); } }
+
+/* Premium free-floating robot hero composition */
+@layer utilities {
+  .hero-model-wrap { isolation: isolate; }
+  .hero-model-wrap::before,
+  .hero-model-wrap::after { display: none !important; content: none !important; }
+}
+
+@media (max-width: 768px) {
+  .hero-model-wrap { min-height: 390px; }
+}
